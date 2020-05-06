@@ -1,22 +1,29 @@
 <template>
 	<div id = "sign">
-		<sign></sign>
 		<div>
-			<h1>111</h1>
+			<sign></sign>
 		</div>
-		<tabbar></tabbar>
+		<div>
+			<left-tabbar></left-tabbar>
+		</div>
+		<div>
+			<top-tabbar></top-tabbar>
+		</div>
 	</div>
 </template>
 
 <script>
 import sign from './components/sign.vue'
-import tabbar from './components/tabbar.vue'
+import leftTabbar from './components/leftTabbar.vue'
+import topTabbar from './components/topTabbar.vue'
+
 
 export default {
   name: 'App',
 	components:{
 		sign,
-		tabbar
+		leftTabbar,
+		topTabbar
 	}
 }
 </script>
