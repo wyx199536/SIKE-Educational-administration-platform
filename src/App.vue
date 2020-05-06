@@ -1,13 +1,14 @@
 <template>
-	<div id = "sign">
+	<div id = "page">
 		<div>
 			<sign></sign>
+			<top-tabbar></top-tabbar>
 		</div>
 		<div>
 			<left-tabbar></left-tabbar>
 		</div>
 		<div>
-			<top-tabbar></top-tabbar>
+			<router-view></router-view>
 		</div>
 	</div>
 </template>
@@ -23,11 +24,14 @@ export default {
 	components:{
 		sign,
 		leftTabbar,
-		topTabbar
+		topTabbar,
 	}
 }
 </script>
 
 <style scoped>
-	
+	#page{
+		width: 1000px;
+		margin-top: 0;
+	}
 </style>
