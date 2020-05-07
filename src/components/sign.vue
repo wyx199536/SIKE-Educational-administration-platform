@@ -1,6 +1,7 @@
 <template>
 	<div id = "sign-area">
-		{{title}}
+		<span id = "sign" class = "title">{{sign}}</span>
+		<span id = "type" class = "title">{{typeS}}</span>
 	</div>
 </template>
 
@@ -9,7 +10,9 @@
 		name : 'sign',
 		data(){
 			return{
-				title:'思课教育'
+				sign: '思课',
+				typeT: '教师版',
+				typeS: '家长版'
 			}
 		}
 	}
@@ -21,14 +24,25 @@
 		height: 60px;
 		
 		background-color: #33CCCC;
-		font-size: 18px;
+		
 		color: #FFFFFF;
-		letter-spacing: 3px;
+		letter-spacing: 1px;
 		
 		/* 使div内部字体水平垂直居中，line-height=div的height */
 		text-align: center;
-		line-height: 60px;
-
 		float: left;
+	}
+	.title{
+		font-family: NSimSun;
+		line-height: 60px;
+	}
+	#sign{
+		font-size: 17px;
+		font-weight: 600;
+		margin-right: 2px;
+	}
+	#type{
+		font-size: 16px;
+		font-weight: 300;
 	}
 </style>

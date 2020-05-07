@@ -7,7 +7,7 @@
 		<div>
 			<left-tabbar></left-tabbar>
 		</div>
-		<div>
+		<div id = "content-area">
 			<router-view></router-view>
 		</div>
 	</div>
@@ -33,5 +33,10 @@ export default {
 	#page{
 		width: 1000px;
 		margin-top: 0;
+	}
+	#content-area{
+		position: absolute;
+		top: 60px;
+		left: 170px;
 	}
 </style>
