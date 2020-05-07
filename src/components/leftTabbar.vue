@@ -1,33 +1,22 @@
 <template>
-	<div id="left-tabbar" class = "left-element">
+	<div id="left-tabbar" class="left-element">
 		<div id="avatar">
 			<img src="../../public/img/img.jpg">
 		</div>
 		<div id="user-name">
 			{{userName}}
 		</div>
-		<div id="router" v-for="item in routeList" :key = "item" class = "left-element">
-			<div id="icon">
-				<img src="../../public/img/img.jpg">
-			</div>
-			<div id="link">
-				<router-link to=item.routePath>item.routeName</router-link>
-			</div>
+		<div>
+			<routeLink v-for="route in routeList" :routeURL="route.routePath" :routeName="route.routeName" :key="route.routeName"></routeLink>
+			<div class="tabbar-text" id="tabbar-text-title">思课教育</div>
+			<div class="tabbar-text">www.sike.com</div>
 		</div>
 	</div>
 </template>
 
 <script>
-	export default {
-		name: 'leftTabbar',
-		data() {
-			return {
-				userName: '魏琰熹',
-				avatarURL: '',
-				routeList: routeList
-			}
-		}
-	}
+	import routeLink from './routeLink.vue'
+	
 	const routeList = [{
 			routeName: '首页',
 			routePath: '/home',
@@ -59,10 +48,29 @@
 			routeIconURL:'../../public/img/img.jpg'
 		}
 	]
+	
+	export default {
+		name: 'leftTabbar',
+		data() {
+			return {
+				userName: '魏琰熹',
+				avatarURL: '',
+				routeList: routeList
+			}
+		},
+		components:{
+			routeLink: routeLink
+		},
+		methods:{
+			over(){
+				console.log("aaaa")
+			}
+		}
+	}
 </script>
 
 <style scoped>
-	.left-element{
+	.left-element {
 		width: 170px;
 	}
 	#left-tabbar {
@@ -70,10 +78,8 @@
 		top: 60px;
 		height: 100%;
 		float: left;
-		border: 1px solid #000000;
-		background: #444444;
+		background: #26292d;
 	}
-
 	#avatar {
 		position: relative;
 		margin-top: 25px;
@@ -81,14 +87,13 @@
 		transform: translateX(-50%);
 		-ms-transform: translateX(-50%);
 		-webkit-transform: translateX(-50%);
-		height: 55px;
-		width: 55px;
+		height: 60px;
+		width: 60px;
 	}
-
 	#avatar img {
 		border-radius: 50%;
-		height: 55px;
-		width: 55px;
+		height: 60px;
+		width: 60px;
 		object-fit: cover;
 	}
 	#user-name {
@@ -96,34 +101,16 @@
 		text-align: center;
 		font-size: 14px;
 		color: #FFFFFF;
+		margin-bottom: 15px;
 	}
-	#router{
-		position: relative;
-		margin-top: 5px;
-		height: 30px;
+	.active{
+		color: #ffffff;
 	}
-	#icon{
-		position: relative;
-		top: 50%;
-		left: 10%;
-		transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-		float: left;
-		width: 20px;
-		height: 20px;
+	.tabbar-text{
+		text-align: center;
+		color: #656565;
+	}
+	#tabbar-text-title{
 		margin-top: 30px;
-	}
-	#icon img{
-		width: 20px;
-		height: 20px;
-		object-fit: cover;
-	}
-	#link{
-		position: relative;
-		top: 50%;	
-		width: 70px;
-		height: 20px;
-		float:left;
 	}
 </style>

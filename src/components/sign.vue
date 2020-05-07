@@ -14,6 +14,8 @@
 				typeT: '教师版',
 				typeS: '家长版'
 			}
+		},
+		methods:{
 		}
 	}
 </script>
