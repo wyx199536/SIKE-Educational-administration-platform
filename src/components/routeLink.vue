@@ -45,7 +45,7 @@
 <style scoped>
 	#link-area{
 		width: 100%;
-		height: 70px;
+		height: 80px;
 	}
 	.link-area-element{
 		position: relative;
@@ -72,10 +72,9 @@
 	}
 	#link {
 		width: 80px;
-		height: 30px;
-		line-height: 30px;
+		line-height: 40px;
 		margin-left: 3px;
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.active{
 		color: #ffffff;

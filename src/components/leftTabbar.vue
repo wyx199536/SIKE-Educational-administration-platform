@@ -71,11 +71,11 @@
 
 <style scoped>
 	.left-element {
-		width: 170px;
+		width:200px;
 	}
 	#left-tabbar {
 		position: fixed;
-		top: 60px;
+		top: 80px;
 		height: 100%;
 		float: left;
 		background: #26292d;
@@ -109,6 +109,7 @@
 	.tabbar-text{
 		text-align: center;
 		color: #656565;
+		font-size: 16px;
 	}
 	#tabbar-text-title{
 		margin-top: 30px;
