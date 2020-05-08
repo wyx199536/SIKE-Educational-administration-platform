@@ -56,6 +56,7 @@
 		-webkit-transform: translateY(-50%);
 		color: #959595;
 		float: left;
+		cursor:pointer;
 	}
 	.over{
 		color: #ffffff;
