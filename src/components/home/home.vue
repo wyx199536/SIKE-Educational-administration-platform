@@ -1,5 +1,5 @@
 <template>
-	<div>home</div>
+	<div id="home">开发中...</div>
 </template>
 
 <script>
@@ -8,5 +8,8 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	#home{
+		text-align: center;
+	}
 </style>

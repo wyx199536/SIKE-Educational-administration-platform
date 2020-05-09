@@ -1,7 +1,7 @@
 <template>
 	<div id="link-area" >
 		<div id="icon" class="link-area-element">
-			<img src="../../public/img/img.jpg" alt="">
+			<img :src="routeIconURL" alt="">
 		</div>
 		<div id="link" :class="{'link-area-element':true, over:ifOver}" @mouseenter="mouseIn" @mouseleave="mouseOut" >
 			<router-link :to="routeURL" tag="span" replace>
@@ -25,6 +25,10 @@
 				required: true
 			},
 			routeName:{
+				type: String,
+				required: true
+			},
+			routeIconURL:{
 				type: String,
 				required: true
 			}

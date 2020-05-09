@@ -7,7 +7,11 @@
 			{{userName}}
 		</div>
 		<div>
-			<routeLink v-for="route in routeList" :routeURL="route.routePath" :routeName="route.routeName" :key="route.routeName"></routeLink>
+			<routeLink v-for="route in routeList" 
+			:routeURL="route.routePath" 
+			:routeName="route.routeName" 
+			:routeIconURL="route.routeIconURL"
+			:key="route.routeName"></routeLink>
 			<div class="tabbar-text" id="tabbar-text-title">思课教育</div>
 			<div class="tabbar-text">www.sike.com</div>
 		</div>
@@ -20,32 +24,32 @@
 	const routeList = [{
 			routeName: '首页',
 			routePath: '/home',
-			routeIconURL: '../../public/img/img.jpg'
+			routeIconURL: require('../../public/img/com.png'),
 		},	
 		{
 			routeName: '课程安排',
 			routePath: '/schedule',
-			routeIconURL:'../../public/img/img.jpg'
+			routeIconURL:require('../../public/img/com.png'),
 		},
 		{
 			routeName: '课程反馈',
 			routePath: '/feedback',
-			routeIconURL:'../../public/img/img.jpg'
+			routeIconURL:require('../../public/img/com.png'),
 		},
 		{
 			routeName: '教师列表',
 			routePath: '/teacherList',
-			routeIconURL:'../../public/img/img.jpg'
+			routeIconURL:require('../../public/img/com.png'),
 		},
 		{
 			routeName: '沟通',
 			routePath: '/communication',
-			routeIconURL:'../../public/img/img.jpg'
+			routeIconURL: require('../../public/img/com.png'),
 		},
 		{
 			routeName: '个人档案',
 			routePath: '/profile',
-			routeIconURL:'../../public/img/img.jpg'
+			routeIconURL:require('../../public/img/com.png'),
 		}
 	]
 	

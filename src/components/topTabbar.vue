@@ -9,6 +9,9 @@
 		<div id="avatar-button" class="top-element">
 			<avatarButton></avatarButton>
 		</div>
+		<div id="notice-button" class="top-element">
+			<noticeButton></noticeButton>
+		</div>
 	</div>
 </template>
 
@@ -16,13 +19,15 @@
 	import lessonButton from './topTabbar/lessonButton.vue'
 	import settingButton from './topTabbar/settingButton.vue'
 	import avatarButton from './topTabbar/avatarButton.vue'
+	import noticeButton from './topTabbar/noticeButton.vue'
 	
 	export default{
 		name : 'topTabbar',
 		components:{
 			lessonButton,
 			settingButton,
-			avatarButton
+			avatarButton,
+			noticeButton
 		}
 	}
 </script>
@@ -42,6 +47,9 @@
 		width: 100%;
 		float: left;
 		border: 1px solid #000000;
+	}
+	#notice-button{
+		right: 30%;
 	}
 	#lesson-button{
 		right: 24%;

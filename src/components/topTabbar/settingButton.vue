@@ -1,10 +1,8 @@
 <template>
-	<div>
 		<div id="setting-button" @mouseenter="on" 
 		@mouseout="out" :class="{'button-over': ifShow}">
-		账号设置
+			账号设置
 		</div>
-	</div>
 </template>
 
 <script>
