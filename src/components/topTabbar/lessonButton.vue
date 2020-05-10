@@ -17,6 +17,7 @@
 			showArr(){
 				this.ifShow = true
 				this.$store.commit('changeIfShowLessonArr')
+				console.log('11')
 			},
 			hidArr(){
 				this.ifShow = false

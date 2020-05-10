@@ -1,39 +1,24 @@
 <template>
 	<div id = "page">
 		<div>
-			<sign></sign>
-			<top-tabbar></top-tabbar>
+			<pageHeader></pageHeader>
 		</div>
-		<div>
-			<left-tabbar></left-tabbar>
+		<div id="body-area">
+			<pageLeft></pageLeft>
 		</div>
-		<div id = "content-area">
-			<router-view></router-view>
-			<div id="lesson-arrangement" v-show="ifShowLessonArr">
-				<lessonArrangement></lessonArrangement>
-			</div>
-			<div id="account-controller" v-show="ifShowAccountController">
-				<accountController></accountController>
-			</div>
-		</div>
+
 	</div>
 </template>
 
 <script>
-import sign from './components/sign.vue'
-import leftTabbar from './components/leftTabbar.vue'
-import topTabbar from './components/topTabbar.vue'
-import lessonArrangement from './components/topTabbar/lessonArrangement.vue'
-import accountController from './components/topTabbar/accountController.vue'
+import pageHeader from './components/pageHeader.vue'
+import pageLeft from './components/pageLeft.vue'
 
 export default {
   name: 'App',
 	components:{
-		sign,
-		leftTabbar,
-		topTabbar,
-		lessonArrangement,
-		accountController
+		pageHeader,
+		pageLeft
 	},
 	data(){
 		return{
@@ -46,6 +31,9 @@ export default {
 		ifShowAccountController(){
 			return this.$store.state.ifShowAccountController
 		}
+	},
+	created(){
+		this.$store.commit('ensureCssType')
 	}
 }
 </script>
@@ -54,12 +42,7 @@ export default {
 	#page{
 		margin-top: 0;
 	}
-	#content-area{
-		position: fixed;
-		top: 80px;
-		left: 200px;
-		background: #EEEEEE;
-		width: 100%;
+	#body-area{
 		height: 100%;
 	}
 	#lesson-arrangement{

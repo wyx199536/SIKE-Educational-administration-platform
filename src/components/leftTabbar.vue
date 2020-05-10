@@ -82,7 +82,7 @@
 		top: 80px;
 		height: 100%;
 		float: left;
-		background: #26292d;
+		background: #1c242a;
 	}
 	#avatar {
 		position: relative;
