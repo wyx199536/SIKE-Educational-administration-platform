@@ -38,6 +38,6 @@
 		width: 1040px;
 	}
 	.content-area-c{
-		
+		width: 1200px;
 	}
 </style>

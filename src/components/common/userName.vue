@@ -1,5 +1,5 @@
 <template>
-	<div :class="{'userName':true,'userName-a':ifA,'userName-b':ifB,'userName-c':ifC}">
+	<div>
 		{{userName}}
 	</div>
 </template>
@@ -9,23 +9,15 @@
 		name: 'userName',
 		data(){
 			return{
-				userName: '魏琰熹'
+				userName: '魏琰熹',
+				ifA: this.$store.state.cssTypeA,
+				ifB: this.$store.state.cssTypeB,
+				ifC: this.$store.state.cssTypeC,
 			}
 		}
 	}
 </script>
 
 <style scoped>
-	.userName{
-		
-	}
-	.userName-a{
-		
-	}
-	.userName-b{
-		
-	}
-	.userName-c{
-		
-	}
+	
 </style>

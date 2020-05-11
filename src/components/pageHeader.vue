@@ -43,11 +43,11 @@
 		height: 70px;
 	}
 	.header-c{
-		height: 90px;
+		height: 80px;
 	}
 	.top-element{
 		position: fixed;
-		top: 45px;
+		top: 40px;
 		transform: translate(50%,-50%);
 		-ms-transform: translate(50%,-50%);
 		-webkit-transform: translate(50%,-50%);

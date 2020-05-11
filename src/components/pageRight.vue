@@ -25,17 +25,21 @@
 <style scoped>
 	.page-right{
 		background: #cecece;
-		width: calc(100% - 170px);
-		height: calc(100% - 70px);
+		
 	}
 	.page-right-a{
 		
 	}
 	.page-right-b{
+		width: calc(100% - 170px);
+		height: calc(100% - 70px);
 		position: fixed;
 		left: 170px;
 	}
 	.page-right-c{
-		
+		width: calc(100% - 200px);
+		height: calc(100% - 80px);
+		position: fixed;
+		left: 200px;
 	}
 </style>

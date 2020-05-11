@@ -17,7 +17,7 @@ export default new Vuex.Store({
 			console.log(width)
 			if(width < 1200){
 				state.cssTypeA = true
-			}else if(width < 1400){
+			}else if(width < 1450){
 				state.cssTypeB = true
 			}else{
 				state.cssTypeC = true
