@@ -3,22 +3,24 @@
 		<div>
 			<pageHeader></pageHeader>
 		</div>
-		<div id="body-area">
+		<div id="page-body">
 			<pageLeft></pageLeft>
+			<pageRight></pageRight>
 		</div>
-
 	</div>
 </template>
 
 <script>
 import pageHeader from './components/pageHeader.vue'
 import pageLeft from './components/pageLeft.vue'
+import pageRight from './components/pageRight.vue'
 
 export default {
   name: 'App',
 	components:{
 		pageHeader,
-		pageLeft
+		pageLeft,
+		pageRight
 	},
 	data(){
 		return{
@@ -42,8 +44,7 @@ export default {
 	#page{
 		margin-top: 0;
 	}
-	#body-area{
-		height: 100%;
+	#page-body{
 	}
 	#lesson-arrangement{
 		position: fixed;

@@ -37,10 +37,10 @@
 		line-height: 70px;
 	}
 	.sign-area-b{
-		width: 187px;
-		height: 80px;
+		width: 170px;
+		height: 70px;
 		/* 使div内部字体水平垂直居中，line-height=div的height */
-		line-height: 80px;
+		line-height: 70px;
 	}
 	.sign-area-c{
 		width: 210px;
@@ -49,13 +49,13 @@
 		line-height: 90px;
 	}
 	.sign-a{
-		font-size:18px;
+		font-size:16px;
 	}
 	.sign-b{
-		font-size:20px;
+		font-size:18px;
 	}
 	.sign-c{
-		font-size:22px;
+		font-size:20px;
 	}
 	.sign-s{
 		font-weight: 600;

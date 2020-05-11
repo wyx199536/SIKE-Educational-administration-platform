@@ -29,7 +29,7 @@
 		width: 163px;
 	}
 	.page-left-b{
-		width: 187px;
+		width: 170px;
 	}
 	.page-left-c{
 		width: 210px;

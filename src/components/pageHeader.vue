@@ -40,7 +40,7 @@
 		height: 70px;
 	}
 	.header-b{
-		height: 80px;
+		height: 70px;
 	}
 	.header-c{
 		height: 90px;
