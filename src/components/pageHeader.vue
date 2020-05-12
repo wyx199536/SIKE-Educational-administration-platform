@@ -1,13 +1,9 @@
 <template>
 	<div :class="{'header-a':ifA,'header-b':ifB,'header-c':ifC}">
-		<div>
-			<sign></sign>
-		</div>
-		<div id='top-tabbar-area'>
-			<lessonButton id="lesson-button" class="top-element"></lessonButton>
-			<settingButton id="setting-button" class="top-element"></settingButton>
-			<avatarButton id="avatar-button" class="top-element"></avatarButton>
-		</div>
+		<sign></sign>
+		<lessonButton id="lesson-button" class="top-element"></lessonButton>
+		<settingButton id="setting-button" class="top-element"></settingButton>
+		<avatarButton id="avatar-button" class="top-element"></avatarButton>
 	</div>
 </template>
 
@@ -46,8 +42,8 @@
 		height: 80px;
 	}
 	.top-element{
-		position: fixed;
-		top: 40px;
+		position: absolute;
+		top: 37px;
 		transform: translate(50%,-50%);
 		-ms-transform: translate(50%,-50%);
 		-webkit-transform: translate(50%,-50%);

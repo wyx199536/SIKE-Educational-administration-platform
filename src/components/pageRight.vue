@@ -24,8 +24,7 @@
 
 <style scoped>
 	.page-right{
-		background: #cecece;
-		
+		background: #f1f1f1;
 	}
 	.page-right-a{
 		

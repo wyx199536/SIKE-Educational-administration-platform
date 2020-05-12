@@ -6,14 +6,15 @@
 		<div :class="{'page-left-element':true,'user-name-area-a':ifA,'user-name-area-b':ifB,'user-name-area-c':ifC}">
 			{{userName}}
 		</div>
-		<div>
-			
+		<div id="router-list-area">
+			<routerList></routerList>
 		</div>
 	</div>
 </template>
 
 <script>
 	import avatar from './common/avatar.vue'
+	import routerList from './pageLeft/routerList.vue'
 	
 	export default{
 		name: 'pageLeft',
@@ -27,6 +28,7 @@
 		},
 		components:{
 			avatar,
+			routerList
 		}
 	}
 </script>
@@ -73,5 +75,9 @@
 	}
 	.user-name-area-c{
 		margin-top: 106px;
+	}
+	#router-list-area{
+		margin-top: 130px;
+		
 	}
 </style>
