@@ -47,6 +47,21 @@
 		position: fixed;
 		height: 100%;
 		background: #1c242a;
+		overflow: auto;
+	}
+	.page-left::-webkit-scrollbar-track {
+		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+		border-radius:10px;
+		background-color:#000000;
+	}
+	.page-left::-webkit-scrollbar {
+		width:4px;
+		background-color:#797d87;
+	}
+	.page-left::-webkit-scrollbar-thumb {
+		border-radius:10px;
+		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+		background-color:#63676F;
 	}
 	.page-left-element{
 		position: absolute;
@@ -78,6 +93,5 @@
 	}
 	#router-list-area{
 		margin-top: 130px;
-		
 	}
 </style>

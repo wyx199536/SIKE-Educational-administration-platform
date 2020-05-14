@@ -24,18 +24,21 @@
 
 <style scoped>
 	.page-right{
+		overflow: auto;
 		background: #f1f1f1;
 	}
 	.page-right-a{
 		
 	}
 	.page-right-b{
+		min-width: 1040px;
 		width: calc(100% - 170px);
 		height: calc(100% - 70px);
 		position: fixed;
 		left: 170px;
 	}
 	.page-right-c{
+		min-width: 1200px;
 		width: calc(100% - 200px);
 		height: calc(100% - 80px);
 		position: fixed;

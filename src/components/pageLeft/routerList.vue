@@ -40,6 +40,25 @@
 				routeName: '个人档案',
 				routePath: '/profile',
 				routeIconURL: require('../../../public/img/profile.jpg'),
+			},
+			{
+				routeName: '个人档案',
+				routePath: '/profile',
+				routeIconURL: require('../../../public/img/profile.jpg'),
+			},
+			{
+				routeName: '个人档案',
+				routePath: '/profile',
+				routeIconURL: require('../../../public/img/profile.jpg'),
+			},
+			{
+				routeName: '个人档案',
+				routePath: '/profile',
+				routeIconURL: require('../../../public/img/profile.jpg'),
+			},{
+				routeName: '个人档案',
+				routePath: '/profile',
+				routeIconURL: require('../../../public/img/profile.jpg'),
 			}
 		]
 	
