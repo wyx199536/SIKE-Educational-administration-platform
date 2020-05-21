@@ -15,20 +15,20 @@
 	const routeList=[{
 				routeName: '首页',
 				routePath: '/home',
-				routeIconURL: require('../../../public/img/com.png'),
-				activeRouteIconURL: require('../../../public/img/com.png'),
+				routeIconURL: require('../../../public/img/home1.png'),
+				activeRouteIconURL: require('../../../public/img/home2.png'),
 			},	
 			{
 				routeName: '课程安排',
 				routePath: '/schedule',
-				routeIconURL: require('../../../public/img/com.png'),
-				activeRouteIconURL: require('../../../public/img/com.png'),
+				routeIconURL: require('../../../public/img/schedule1.png'),
+				activeRouteIconURL: require('../../../public/img/schedule2.png'),
 			},
 			{
 				routeName: '课程反馈',
 				routePath: '/feedback',
-				routeIconURL: require('../../../public/img/com.png'),
-				activeRouteIconURL: require('../../../public/img/com.png'),
+				routeIconURL: require('../../../public/img/feedback1.png'),
+				activeRouteIconURL: require('../../../public/img/feedback2.png'),
 			},
 			{
 				routeName: '教师列表',

@@ -1,14 +1,11 @@
 <template>
 	<div :class="{'page-left':true,'page-left-a':ifA,'page-left-b':ifB,'page-left-c':ifC}">
-		<div :class="{'page-left-element':true,'avatar-area-a':ifA,'avatar-area-b':ifB,'avatar-area-c':ifC}">
-			<avatar></avatar>
-		</div>
-		<div :class="{'page-left-element':true,'user-name-area-a':ifA,'user-name-area-b':ifB,'user-name-area-c':ifC}">
-			{{userName}}
-		</div>
-		<div id="router-list-area">
-			<routerList></routerList>
-		</div>
+		<avatar :class="{avatar:true,'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC}"></avatar>
+		<div :class="{'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC}">{{userName}}</div>
+		<routerList></routerList>
+		<img src="../../public/img/sign.png" alt="思课教育" 
+		:class="{'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC,'page-left-sign-a':ifA,'page-left-sign-b':ifB,'page-left-sign-c':ifC}">
+		<div :class="{'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC}" id="page-left-website">www.sike.com</div>
 	</div>
 </template>
 
@@ -41,13 +38,14 @@
 		width: 170px;
 	}
 	.page-left-c{
-		width: 200px;
+		width: 190px;
 	}
 	.page-left{
 		position: fixed;
 		height: 100%;
 		background: #253038;
 		overflow: auto;
+		text-align: center;
 	}
 	.page-left::-webkit-scrollbar-track {
 		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
@@ -63,35 +61,34 @@
 		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
 		background-color:#63676F;
 	}
-	.page-left-element{
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
+	.page-left-element-a{
+		margin: 6px auto 6px auto;
 		color: #FFFFFF;
 	}
-	.avatar-area-a{
-		margin-top: 20px;
+	.page-left-element-b{
+		margin: 8px auto 8px auto;
+		color: #FFFFFF;
 	}
-	.avatar-area-b{
-		margin-top: 22px;
+	.page-left-element-c{
+		margin: 10px auto 10px auto;
+		color: #FFFFFF;
 	}
-	.avatar-area-c{
-		margin-top: 24px;
+	.page-left-sign-a{
+		width: 55px;
+		height: 55px;
 	}
-	.user-name-area-a{
-		margin-top: 102px;
-		font-size: 13px;
+	.page-left-sign-b{
+		width: 55px;
+		height: 55px;
 	}
-	.user-name-area-b{
-		margin-top: 104px;
-		font-size: 14px;
+	.page-left-sign-c{
+		width: 60px;
+		height: 60px;
 	}
-	.user-name-area-c{
-		margin-top: 106px;
+	#page-left-website{
+		color: #959595;
 	}
-	#router-list-area{
-		margin-top: 130px;
+	.avatar{
+		margin-top: 25px;
 	}
 </style>

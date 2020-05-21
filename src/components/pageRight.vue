@@ -39,9 +39,9 @@
 	}
 	.page-right-c{
 		min-width: 1200px;
-		width: calc(100% - 200px);
+		width: calc(100% - 190px);
 		height: calc(100% - 80px);
 		position: fixed;
-		left: 200px;
+		left: 190px;
 	}
 </style>
