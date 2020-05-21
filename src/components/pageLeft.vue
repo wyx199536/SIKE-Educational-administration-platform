@@ -46,7 +46,7 @@
 	.page-left{
 		position: fixed;
 		height: 100%;
-		background: #1c242a;
+		background: #253038;
 		overflow: auto;
 	}
 	.page-left::-webkit-scrollbar-track {

@@ -4,6 +4,7 @@
 		:routerURL="router.routePath"
 		:routerName="router.routeName" 
 		:routerIconURL="router.routeIconURL"
+		:activeRouterIconURL="router.activeRouteIconURL"
 		:key="router.routeName"></routerButton>
 	</div>
 </template>
@@ -15,50 +16,37 @@
 				routeName: '首页',
 				routePath: '/home',
 				routeIconURL: require('../../../public/img/com.png'),
+				activeRouteIconURL: require('../../../public/img/com.png'),
 			},	
 			{
 				routeName: '课程安排',
 				routePath: '/schedule',
 				routeIconURL: require('../../../public/img/com.png'),
+				activeRouteIconURL: require('../../../public/img/com.png'),
 			},
 			{
 				routeName: '课程反馈',
 				routePath: '/feedback',
 				routeIconURL: require('../../../public/img/com.png'),
+				activeRouteIconURL: require('../../../public/img/com.png'),
 			},
 			{
 				routeName: '教师列表',
 				routePath: '/teacherList',
 				routeIconURL: require('../../../public/img/com.png'),
+				activeRouteIconURL: require('../../../public/img/com.png'),
 			},
 			{
 				routeName: '沟通',
 				routePath: '/communication',
-				routeIconURL: require('../../../public/img/com.png'),
+				routeIconURL: require('../../../public/img/chat1.png'),
+				activeRouteIconURL: require('../../../public/img/chat2.png'),
 			},
 			{
 				routeName: '个人档案',
 				routePath: '/profile',
 				routeIconURL: require('../../../public/img/profile.jpg'),
-			},
-			{
-				routeName: '个人档案',
-				routePath: '/profile',
-				routeIconURL: require('../../../public/img/profile.jpg'),
-			},
-			{
-				routeName: '个人档案',
-				routePath: '/profile',
-				routeIconURL: require('../../../public/img/profile.jpg'),
-			},
-			{
-				routeName: '个人档案',
-				routePath: '/profile',
-				routeIconURL: require('../../../public/img/profile.jpg'),
-			},{
-				routeName: '个人档案',
-				routePath: '/profile',
-				routeIconURL: require('../../../public/img/profile.jpg'),
+				activeRouteIconURL: require('../../../public/img/com.png'),
 			}
 		]
 	
@@ -84,6 +72,5 @@
 </script>
 
 <style scoped>
-	#router-list-area{
-	}
+
 </style>

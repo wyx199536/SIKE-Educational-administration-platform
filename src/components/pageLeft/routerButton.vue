@@ -1,16 +1,12 @@
 <template>
-	<div :class="{'router-area-a':ifA,'router-area-b':ifB,'router-area-c':ifC}">
-		<div id="icon" class="route-area-element">
-			<img :src="routerIconURL" alt="">
-		</div>
-		<div id="router" :class="{'route-area-element':true, over:ifOver}" 
-		@mouseenter="mouseIn" 
-		@mouseleave="mouseOut" >
-			<router-link :to="routerURL" tag="span" replace>
-			{{routerName}}
-			</router-link>
-		</div>
-	</div>
+	<router-link :to="routerURL" tag="div" replace 
+	:class="{'router-area':true,'router-area-a':ifA,'router-area-b':ifB,'router-area-c':ifC}">
+		<img :src="iconURL" alt="" class="router-element">
+		<span :class="{'router-button':true,'router-element':true,'over':ifOver}"
+		@mouseenter="mouseIn" @mouseleave="mouseOut">
+		{{routerName}}
+		</span>
+	</router-link>
 </template>
 
 <script>
@@ -22,6 +18,27 @@
 				ifA: this.$store.state.cssTypeA,
 				ifB: this.$store.state.cssTypeB,
 				ifC: this.$store.state.cssTypeC,
+			}
+		},
+		computed:{
+			ifActive(){
+				if(this.$route.path == this.routerURL){
+					return true
+				}else{
+					return false
+				}
+			},
+			iconURL(){
+				if(this.ifActive){
+					return this.activeRouterIconURL
+				}else{
+					return this.routerIconURL
+				}
+			}
+		},
+		watch:{
+			routerIconURL(val){
+				this.iconURL = val
 			}
 		},
 		props:{
@@ -36,65 +53,64 @@
 			routerIconURL:{
 				type: String,
 				required: true
+			},
+			activeRouterIconURL:{
+				type: String,
+				required: true
 			}
 		},
 		methods:{
 			mouseIn(){
 				this.ifOver = true
-				console.log(this.ifOver)
 			},
 			mouseOut(){
 				this.ifOver = false
-				console.log(this.ifOver)
 			}
 		}
 	}
 </script>
 
 <style scoped>
+	.router-area{
+		text-align: center;
+	}
 	.router-area-a{
-		width: 100%;
-		height: 55px;
+		height: 45px;
 	}
 	.router-area-b{
-		width: 100%;
-		height: 56px;
-		font-size: 16px;
+		height: 55px;
+		line-height: 53px;
 	}
 	.router-area-c{
-		width: 100%;
-		height: 70px;
-		font-size: 18px;
+		height: 60px;
+		line-height: 58px;
 	}
-	.route-area-element{
-		position: relative;
-		top: 50%;
-		left: 20%;
-		transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		-webkit-transform: translateY(-50%);
-		color: #959595;
-		float: left;
-		cursor:pointer;
+	.router{
+		height: 100%;
 	}
-	.over{
-		color: #ffffff;
+	.router-element{
+		display: inline-block;
+		vertical-align: middle;
 	}
-	#icon {
-		width: 25px;
-		height: 25px;
-	}
-	#icon img {
-		width: 25px;
-		height: 25px;
+	.router-area img{
+		width: 20px;
+		height: 20px;
 		object-fit: cover;
+		padding-right: 8px;
 	}
-	#router {
+	.router-button{
 		width: 80px;
-		line-height: 40px;
-		margin-left: 3px;
+		text-align: left;
+		color: #959595;
+		cursor: pointer;
 	}
 	.active{
+		background-color: #1b252c;
+	}
+	.active span{
+		color: #ffffff;
+	}
+	.over {
 		color: #ffffff;
 	}
 </style>
