@@ -27,6 +27,20 @@
 		overflow: auto;
 		background: #f1f1f1;
 	}
+	.page-right::-webkit-scrollbar-track {
+		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+		border-radius:6px;
+		background-color:#ffffff;
+	}
+	.page-right::-webkit-scrollbar {
+		width:6px;
+		background-color:#9ba1ac;
+	}
+	.page-right::-webkit-scrollbar-thumb {
+		border-radius:6px;
+		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+		background-color:#9ba1ac;
+	}
 	.page-right-a{
 		
 	}

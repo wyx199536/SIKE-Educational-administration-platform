@@ -1,8 +1,6 @@
 <template>
 	<div id="avatar-button" :class="{'button-over': ifShow}">
-		<img src="../../../public/img/img.jpg" alt="" 
-		@mouseenter="on" 
-		@mouseout="out" >
+		<img src="../../../../public/img/img.jpg" alt="">
 	</div>
 </template>
 

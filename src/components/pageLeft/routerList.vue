@@ -33,8 +33,8 @@
 			{
 				routeName: '教师列表',
 				routePath: '/teacherList',
-				routeIconURL: require('../../../public/img/com.png'),
-				activeRouteIconURL: require('../../../public/img/com.png'),
+				routeIconURL: require('../../../public/img/teacher1.png'),
+				activeRouteIconURL: require('../../../public/img/teacher2.png'),
 			},
 			{
 				routeName: '沟通',
@@ -45,8 +45,8 @@
 			{
 				routeName: '个人档案',
 				routePath: '/profile',
-				routeIconURL: require('../../../public/img/profile.jpg'),
-				activeRouteIconURL: require('../../../public/img/com.png'),
+				routeIconURL: require('../../../public/img/profile1.png'),
+				activeRouteIconURL: require('../../../public/img/profile2.png'),
 			}
 		]
 	

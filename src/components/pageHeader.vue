@@ -1,17 +1,15 @@
 <template>
 	<div :class="{'header-a':ifA,'header-b':ifB,'header-c':ifC}">
 		<sign></sign>
-		<lessonButton id="lesson-button" class="top-element"></lessonButton>
-		<settingButton id="setting-button" class="top-element"></settingButton>
-		<avatarButton id="avatar-button" class="top-element"></avatarButton>
+		<div :class="{'header-left-a':ifA,'header-left-b':ifB,'header-left-c':ifC}">
+			<headerButtonBar></headerButtonBar>
+		</div>
 	</div>
 </template>
 
 <script>
-	import lessonButton from './topTabbar/lessonButton.vue'
-	import settingButton from './topTabbar/settingButton.vue'
-	import avatarButton from './topTabbar/avatarButton.vue'
 	import sign from './pageHeader/sign.vue'
+	import headerButtonBar from './pageHeader/headerButtonBar.vue'
 	
 	export default{
 		name: 'pageHeader',
@@ -24,9 +22,7 @@
 		},
 		components:{
 			sign,
-			lessonButton,
-			settingButton,
-			avatarButton
+			headerButtonBar
 		}
 	}
 </script>
@@ -39,7 +35,22 @@
 		height: 70px;
 	}
 	.header-c{
-		height: 80px;
+		height: 70px;
+	}
+	.header-left-a{
+		width: calc(100% - 163px);
+	}
+	.header-left-b{
+		height: 70px;
+		width: calc(100% - 170px);
+		position: fixed;
+		right: 3px;
+	}
+	.header-left-c{
+		height: 70px;
+		width: calc(100% - 190px);
+		position: fixed;
+		right: 3px;
 	}
 	.top-element{
 		position: absolute;

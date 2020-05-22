@@ -1,6 +1,5 @@
 <template>
-		<div id="lesson-button" @mouseenter="showArr" 
-		@mouseout="hidArr" :class="{'button-over': ifShow}">
+		<div id="lesson-button" :class="{'button-over': ifShow}">
 			课程
 		</div>
 </template>

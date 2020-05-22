@@ -3,9 +3,11 @@
 		<avatar :class="{avatar:true,'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC}"></avatar>
 		<div :class="{'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC}">{{userName}}</div>
 		<routerList></routerList>
-		<img src="../../public/img/sign.png" alt="思课教育" 
+		<img src="../../public/img/sign.png" alt="思课教育" id="page-left-sign" 
 		:class="{'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC,'page-left-sign-a':ifA,'page-left-sign-b':ifB,'page-left-sign-c':ifC}">
-		<div :class="{'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC}" id="page-left-website">www.sike.com</div>
+		<div :class="{'page-left-element-a':ifA,'page-left-element-b':ifB,'page-left-element-c':ifC}" id="page-left-website">
+			www.sike.com
+		</div>
 	</div>
 </template>
 
@@ -42,7 +44,7 @@
 	}
 	.page-left{
 		position: fixed;
-		height: 100%;
+		height: calc(100% - 70px);
 		background: #253038;
 		overflow: auto;
 		text-align: center;
@@ -85,8 +87,12 @@
 		width: 60px;
 		height: 60px;
 	}
+	#page-left-sign{
+		padding-top: 10px;
+	}
 	#page-left-website{
 		color: #959595;
+		padding-bottom: 20px;
 	}
 	.avatar{
 		margin-top: 25px;

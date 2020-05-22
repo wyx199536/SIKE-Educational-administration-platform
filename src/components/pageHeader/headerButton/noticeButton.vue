@@ -1,7 +1,6 @@
 <template>
-		<div id="notice-button" @mouseenter="on" 
-		@mouseout="out" :class="{'button-over': ifShow}">
-			<img src="../../../public/img/com.png" alt="">
+		<div id="notice-button" :class="{'button-over': ifShow}">
+			<img src="../../../../public/img/communication.png" alt="">
 		</div>
 </template>
 
@@ -18,6 +17,7 @@
 
 <style scoped>
 	#notice-button{
+		
 		height: 40px;
 		width: 40px;
 	}

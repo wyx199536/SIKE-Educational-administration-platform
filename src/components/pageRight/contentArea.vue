@@ -22,12 +22,8 @@
 
 <style scoped>
 	.content-area{
-		position: absolute;
-		left: 50%;
+		margin: 0 auto;
 		height: 100%;
-		transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
 		border: 1px #000000 solid;
 	}
 	.content-area-a{
@@ -35,6 +31,7 @@
 	}
 	.content-area-b{
 		min-width: 1040px;
+		width: 1040px;
 	}
 	.content-area-c{
 		min-width: 1200px;
