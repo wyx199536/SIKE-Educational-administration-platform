@@ -17,27 +17,34 @@ const routes = [{
 	},
 	{
 		path: '/home',
-		component: home
+		component: home,
+		name: '首页'
 	},
 	{
 		path: '/communication',
-		component: communication
+		component: communication,
+		name: '沟通',
 	},
 	{
 		path: '/profile',
-		component: profile
+		component: profile,
+		name: '个人档案'
 	},
 	{
 		path: '/feedback',
-		component: feedback
+		component: feedback,
+		name: '课程反馈'
 	},
 	{
 		path: '/schedule',
-		component: schedule
+		component: schedule,
+		name: '课程安排'
+		
 	},
 	{
 		path: '/teacherlist',
-		component: teacherList
+		component: teacherList,
+		name: '教师列表'
 	}
 ]
 

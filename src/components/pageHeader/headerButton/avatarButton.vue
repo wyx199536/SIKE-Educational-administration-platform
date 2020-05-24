@@ -1,6 +1,6 @@
 <template>
 	<div id="avatar-button" :class="{'button-over': ifShow}">
-		<img src="../../../../public/img/img.jpg" alt="">
+		
 	</div>
 </template>
 
@@ -27,19 +27,14 @@
 
 <style scoped>
 	#avatar-button{
-		height: 44px;
-		width: 44px;
+		height: 40px;
+		width: 40px;
+		border: 1px solid #000000;
 	}
 	#avatar-button img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		-ms-transform: translate(-50%,-50%);
-		-webkit-transform: translate(-50%,-50%);
 		border-radius: 50%;
-		height: 35px;
-		width: 35px;
+		height: inherit;
+		width: inherit;
 		object-fit: cover;
 	}
 	.button-over{

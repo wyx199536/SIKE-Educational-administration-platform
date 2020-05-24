@@ -1,6 +1,6 @@
 <template>
 	<div id="header-title">
-		1111
+		{{title}}
 	</div>
 </template>
 
@@ -9,7 +9,12 @@
 		name: 'headerTitle',
 		data(){
 			return{
-				title: this.$route.routeName
+				
+			}
+		},
+		computed:{
+			title(){
+				return this.$route.name
 			}
 		}
 	}
@@ -17,7 +22,6 @@
 
 <style scoped>
 	#header-title{
-		height: 100%;
-		line-height: 100%;
+		
 	}
 </style>

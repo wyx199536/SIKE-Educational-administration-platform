@@ -24,7 +24,7 @@
 
 <style scoped>
 	.page-right{
-		overflow: auto;
+		overflow-y: scroll;
 		background: #f1f1f1;
 	}
 	.page-right::-webkit-scrollbar-track {
@@ -54,7 +54,7 @@
 	.page-right-c{
 		min-width: 1200px;
 		width: calc(100% - 190px);
-		height: calc(100% - 80px);
+		height: calc(100% - 70px);
 		position: fixed;
 		left: 190px;
 	}

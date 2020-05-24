@@ -1,6 +1,6 @@
 <template>
 		<div id="notice-button" :class="{'button-over': ifShow}">
-			<img src="../../../../public/img/communication.png" alt="">
+
 		</div>
 </template>
 
@@ -17,19 +17,13 @@
 
 <style scoped>
 	#notice-button{
-		
 		height: 40px;
-		width: 40px;
+		width: 20px;
+		border: 1px #000000 solid;
 	}
 	#notice-button img{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		-ms-transform: translate(-50%,-50%);
-		-webkit-transform: translate(-50%,-50%);
-		height: 30px;
-		width: 30px;
+		height: inherit;
+		height: inherit;
 		object-fit: cover;
 	}
 	.button-over{
