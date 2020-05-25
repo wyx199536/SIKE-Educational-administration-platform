@@ -1,6 +1,7 @@
 <template>
-	<div id="avatar-button" :class="{'button-over': ifShow}">
-		
+	<div id="avatar-button" :class="{'button-over': ifOver}">
+		<img src="../../../../public/img/img.jpg" alt=""
+		@mouseenter="over" @mouseout="out">
 	</div>
 </template>
 
@@ -9,17 +10,15 @@
 		name : 'avatarButton',
 		data(){
 			return{
-				ifShow: false
+				ifOver: false
 			}
 		},
 		methods:{
-			on(){
-				this.ifShow = true
-				this.$store.commit('ChangeIfShowAccountController')
+			over(){
+				this.ifOver = true
 			},
 			out(){
-				this.ifShow = false
-				this.$store.commit('ChangeIfShowAccountController')
+				this.ifOver = false
 			}
 		}
 	}
@@ -29,12 +28,16 @@
 	#avatar-button{
 		height: 40px;
 		width: 40px;
-		border: 1px solid #000000;
+		margin-left: 10px;
 	}
 	#avatar-button img{
 		border-radius: 50%;
-		height: inherit;
-		width: inherit;
+		position: relative;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		height: 25px;
+		width: 25px;
 		object-fit: cover;
 	}
 	.button-over{

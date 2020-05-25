@@ -1,5 +1,8 @@
 <template>
-		<div id="lesson-button" :class="{'button-over': ifShow}">
+		<div id="help-button" 
+		:class="{'button-over': ifOver}"
+		@mouseenter="over" @mouseleave="out"
+		@click="clickHelpButton">
 			帮助与反馈
 		</div>
 </template>
@@ -9,25 +12,25 @@
 		name : 'helpButton',
 		data(){
 			return{
-				ifShow: false
+				ifOver: false
 			}
 		},
 		methods:{
-			showArr(){
-				this.ifShow = true
-				this.$store.commit('changeIfShowLessonArr')
-				console.log('11')
+			over(){
+				this.ifOver = true
 			},
-			hidArr(){
-				this.ifShow = false
-				this.$store.commit('changeIfShowLessonArr')
+			out(){
+				this.ifOver = false
+			},
+			clickHelpButton() {
+				
 			}
 		}
 	}
 </script>
 
 <style scoped>
-	#lesson-button{
+	#help-button{
 		width: 100px;
 		height: 40px;
 		line-height: 40px;

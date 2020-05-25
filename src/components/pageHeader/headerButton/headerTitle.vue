@@ -22,6 +22,8 @@
 
 <style scoped>
 	#header-title{
-		
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 </style>

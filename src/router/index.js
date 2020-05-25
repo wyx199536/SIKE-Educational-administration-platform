@@ -3,12 +3,12 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const home = () => import ('../components/home/home.vue')
-const communication = () => import ('../components/communication/communication.vue')
-const feedback = () => import ('../components/feedback/feedback.vue')
-const profile = () => import ('../components/profile/profile.vue')
-const schedule = () => import ('../components/schedule/schedule.vue')
-const teacherList = () => import ('../components/teacherList/teacherList.vue')
+const home = () => import ('../components/pageRight/home/home.vue')
+const communication = () => import ('../components/pageRight/communication/communication.vue')
+const feedback = () => import ('../components/pageRight/feedback/feedback.vue')
+const profile = () => import ('../components/pageRight/profile/profile.vue')
+const schedule = () => import ('../components/pageRight/schedule/schedule.vue')
+const teacherList = () => import ('../components/pageRight/teacherList/teacherList.vue')
 
 
 const routes = [{

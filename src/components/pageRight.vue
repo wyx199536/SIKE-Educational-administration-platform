@@ -1,12 +1,10 @@
 <template>
 	<div :class="{'page-right':true,'page-right-a':ifA,'page-right-b':ifB,'page-right-c':ifC}">
-			<contentArea></contentArea>
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-	import contentArea from './pageRight/contentArea.vue'
-	
 	export default{
 		name: 'pageRight',
 		data(){
@@ -15,9 +13,6 @@
 				ifB: this.$store.state.cssTypeB,
 				ifC: this.$store.state.cssTypeC
 			}
-		},
-		components:{
-			contentArea
 		}
 	}
 </script>

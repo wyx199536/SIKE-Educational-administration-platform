@@ -1,11 +1,13 @@
 <template>
 	<div id="header-button-bar" 
 	:class="{'header-button-bar-a':ifA,'header-button-bar-b':ifB,'header-button-bar-c':ifC}">
-		<headerTitle class="header-button-bar-element"></headerTitle>
-		<test class="header-button-bar-element"></test>
-		<helpButton class="header-button-bar-element" id="help-button"></helpButton>
-		<lessonButton class="header-button-bar-element"></lessonButton>
-		<avatarButton class="header-button-bar-element"></avatarButton>
+		<headerTitle></headerTitle>
+		<div id="header-button-bar-right">
+			<noticeButton class="header-button-bar-element"></noticeButton>
+			<helpButton class="header-button-bar-element"></helpButton>
+			<lessonButton class="header-button-bar-element"></lessonButton>
+			<avatarButton class="header-button-bar-element"></avatarButton>
+		</div>
 	</div>
 </template>
 
@@ -14,7 +16,7 @@
 	import lessonButton from './headerButton/lessonButton.vue'
 	import headerTitle from './headerButton/headerTitle.vue'
 	import helpButton from './headerButton/helpButton.vue'
-	import test from './headerButton/test.vue'
+	import noticeButton from './headerButton/noticeButton.vue'
 	
 	export default{
 		name: 'headerButtonBar',
@@ -27,7 +29,7 @@
 		},
 		components:{
 			avatarButton,
-			test,
+			noticeButton,
 			helpButton,
 			lessonButton,
 			headerTitle
@@ -40,10 +42,13 @@
 		height: 100%;
 		margin: 0 auto;
 	}
+	#header-button-bar-right{
+		float: right;
+		height: 40px;
+		transform: translateY(-15%);
+	}
 	.header-button-bar-element{
-		display: inline-block;
-		margin-top: auto;
-		margin-bottom: auto;
+		float: left;
 	}
 	.header-button-bar-a{
 		
@@ -55,6 +60,6 @@
 		width: 1200px;
 	}
 	#help-button{
-
+		
 	}
 </style>

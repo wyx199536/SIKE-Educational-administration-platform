@@ -1,6 +1,7 @@
 <template>
-		<div id="lesson-button" :class="{'button-over': ifShow}">
-			课程
+		<div id="lesson-button" :class="{'button-over': ifOver}"
+		@mouseenter="over" @mouseout="out">
+			近期课程
 		</div>
 </template>
 
@@ -9,18 +10,15 @@
 		name : 'lessonButton',
 		data(){
 			return{
-				ifShow: false
+				ifOver: false
 			}
 		},
 		methods:{
-			showArr(){
-				this.ifShow = true
-				this.$store.commit('changeIfShowLessonArr')
-				console.log('11')
+			over(){
+				this.ifOver = true
 			},
-			hidArr(){
-				this.ifShow = false
-				this.$store.commit('changeIfShowLessonArr')
+			out(){
+				this.ifOver = false
 			}
 		}
 	}
@@ -28,11 +26,10 @@
 
 <style scoped>
 	#lesson-button{
-		width: 70px;
+		width: 100px;
 		height: 40px;
 		line-height: 40px;
 		text-align: center;
-		letter-spacing: 4px;
 		text-indent: 4px;
 	}
 	.button-over{

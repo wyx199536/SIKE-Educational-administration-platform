@@ -1,15 +1,24 @@
 <template>
-		<div id="notice-button" :class="{'button-over': ifShow}">
-
+		<div id="notice-button" :class="{'button-over': ifOver}" 
+		@mouseenter="over" @mouseout="out">
+			<img src="../../../../public/img/notice.png" alt="">
 		</div>
 </template>
 
 <script>
 	export default{
-		name: 'noticeButton',
+		name : 'noticeButton',
 		data(){
 			return{
-				ifShow: false
+				ifOver: false
+			}
+		},
+		methods:{
+			over(){
+				this.ifOver = true
+			},
+			out(){
+				this.ifOver = false
 			}
 		}
 	}
@@ -17,17 +26,16 @@
 
 <style scoped>
 	#notice-button{
+		width: 40px;
 		height: 40px;
-		width: 20px;
-		border: 1px #000000 solid;
 	}
 	#notice-button img{
-		height: inherit;
-		height: inherit;
+		width: 18px;
+		height: 18px;
 		object-fit: cover;
+		padding: 11px;
 	}
 	.button-over{
 		background: #f3f3f3;
 	}
-	
 </style>

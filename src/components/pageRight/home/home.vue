@@ -1,5 +1,5 @@
 <template>
-	<div id="home">开发中...</div>
+	<div id="home">首页资讯</div>
 </template>
 
 <script>
