@@ -31,7 +31,7 @@
 
 <style scoped>
 	#teacher-list{
-		margin: 0 auto 10px auto;
+		margin: 0 auto;
 		overflow: visible;
 	}
 	.content-area-a{
@@ -47,14 +47,13 @@
 		min-width: 1200px;
 		width: 1200px;
 	}
-	#teacher-list-info-area-b{
+	.teacher-list-info-area-b{
 		height: calc(100% - 90px);
 		position: absolute;
 		width: 1040px;
 		top: 70px;
-		border: 5px #000000 solid;
 	}
-	#teacher-list-info-area-c{
+	.teacher-list-info-area-c{
 		height: calc(100% - 90px);
 		position: absolute;
 		width: 1200px;
