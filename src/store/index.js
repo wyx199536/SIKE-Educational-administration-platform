@@ -10,6 +10,9 @@ export default new Vuex.Store({
 		cssTypeC: false,
 		ifShowLessonArr: false,
 		ifShowAccountController: false,
+		initialYear: 0,
+		initialMonth: 0,
+		initialDate: '',
   },
   mutations: {
 		ensureCssType(state){
@@ -32,6 +35,19 @@ export default new Vuex.Store({
 		ChangeIfShowAccountController(state){
 			state.ifShowAccountController = !state.ifShowAccountController
 		},
+		setInitialDate(state){
+			let nowDate = new Date();
+			let date = {
+				y : nowDate.getFullYear(),
+				m : nowDate.getMonth() + 1,
+				d : nowDate.getDate(),
+			}
+			date.m = date.m < 10 ? "0" + date.m : date.m;
+			date.d = date.d < 10 ? "0" + date.d : date.d;
+			state.initialYear = date.y;
+			state.initialMonth = date.m;
+			state.initialDate = date.y + '-' + date.m + '-' + date.d;
+		}
   },
   actions: {
   },

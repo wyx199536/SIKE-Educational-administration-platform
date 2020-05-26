@@ -35,7 +35,8 @@ export default {
 		}
 	},
 	created(){
-		this.$store.commit('ensureCssType')
+		this.$store.commit('ensureCssType','setInitialDate')
+		this.$store.commit('setInitialDate')
 	}
 }
 </script>
