@@ -9,7 +9,7 @@ export default new Vuex.Store({
 		cssTypeB: false,
 		cssTypeC: false,
 		ifShowLessonArr: false,
-		ifShowAccountController: false,
+		ifShowAccountComponent: false,
 		initialYear: 0,
 		initialMonth: 0,
 		initialDate: '',
@@ -17,7 +17,6 @@ export default new Vuex.Store({
   mutations: {
 		ensureCssType(state){
 			let width = window.screen.width
-			console.log(width)
 			if(width < 1200){
 				state.cssTypeA = true
 			}else if(width < 1450){
@@ -25,15 +24,12 @@ export default new Vuex.Store({
 			}else{
 				state.cssTypeC = true
 			}
-			console.log('a'+state.cssTypeA)
-			console.log('b'+state.cssTypeB)
-			console.log('c'+state.cssTypeC)
 		},
 		changeIfShowLessonArr(state){
 			state.ifShowLessonArr = !state.ifShowLessonArr
 		},
-		ChangeIfShowAccountController(state){
-			state.ifShowAccountController = !state.ifShowAccountController
+		changeIfShowAccountComponent(state){
+			state.ifShowAccountComponent = !state.ifShowAccountComponent
 		},
 		setInitialDate(state){
 			let nowDate = new Date();
@@ -47,6 +43,7 @@ export default new Vuex.Store({
 			state.initialYear = date.y;
 			state.initialMonth = date.m;
 			state.initialDate = date.y + '-' + date.m + '-' + date.d;
+			console.log(state.initialDate)
 		}
   },
   actions: {

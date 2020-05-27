@@ -49,6 +49,7 @@
 	}
 	.header-button-bar-element{
 		float: left;
+		margin-left: 10px;
 	}
 	.header-button-bar-a{
 		

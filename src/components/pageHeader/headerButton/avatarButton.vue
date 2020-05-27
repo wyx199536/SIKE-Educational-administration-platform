@@ -16,9 +16,12 @@
 		methods:{
 			over(){
 				this.ifOver = true
+				console.log(this.$store.ifShowAccountComponent)
+				this.$store.commit('changeIfShowAccountComponent')
 			},
 			out(){
 				this.ifOver = false
+				this.$store.commit('changeIfShowAccountComponent')
 			}
 		}
 	}

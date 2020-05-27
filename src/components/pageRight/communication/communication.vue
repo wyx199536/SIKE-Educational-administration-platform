@@ -1,6 +1,6 @@
 <template>
 	<div>
-		communication
+		开发中
 	</div>
 </template>
 

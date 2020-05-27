@@ -1,5 +1,5 @@
 <template>
-	<div>profile</div>
+	<div>开发中</div>
 </template>
 
 <script>

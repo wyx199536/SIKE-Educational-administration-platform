@@ -1,10 +1,13 @@
 <template>
 	<div :class="{'page-right':true,'page-right-a':ifA,'page-right-b':ifB,'page-right-c':ifC}">
 		<router-view></router-view>
+		<accountComponent id="account-component-area" v-if="this.$store.ifShowAccountComponent"></accountComponent>
 	</div>
 </template>
 
 <script>
+	import accountComponent from './pageRight/hiddenComponents/accountComponent.vue'
+	
 	export default{
 		name: 'pageRight',
 		data(){
@@ -13,6 +16,9 @@
 				ifB: this.$store.state.cssTypeB,
 				ifC: this.$store.state.cssTypeC
 			}
+		},
+		components:{
+			accountComponent,
 		}
 	}
 </script>
@@ -52,5 +58,11 @@
 		height: calc(100% - 70px);
 		position: fixed;
 		left: 190px;
+	}
+	#account-component-area{
+		position: absolute;
+		top: 0px;
+		right: calc((100% - 1040px) / 2);
+		z-index: 999;
 	}
 </style>
